@@ -14,6 +14,7 @@ class Snake {
         head_x(grid_width / 2),
         head_y(grid_height / 2) {}
 
+  SDL_Point CaptureHeadCell();
   void Update();
 
   void GrowBody();

@@ -15,6 +15,8 @@ game.h
 /home/jcchia/Documents/C++ Nanodegree/Capstone Project/CppND-Capstone-Snake-Game/src/game.h
 iostream
 -
+string
+-
 SDL.h
 /home/jcchia/Documents/C++ Nanodegree/Capstone Project/CppND-Capstone-Snake-Game/src/SDL.h
 
@@ -37,6 +39,8 @@ SDL.h
 /home/jcchia/Documents/C++ Nanodegree/Capstone Project/CppND-Capstone-Snake-Game/src/SDL.h
 snake.h
 /home/jcchia/Documents/C++ Nanodegree/Capstone Project/CppND-Capstone-Snake-Game/src/snake.h
+game.h
+/home/jcchia/Documents/C++ Nanodegree/Capstone Project/CppND-Capstone-Snake-Game/src/game.h
 
 /home/jcchia/Documents/C++ Nanodegree/Capstone Project/CppND-Capstone-Snake-Game/src/snake.h
 vector

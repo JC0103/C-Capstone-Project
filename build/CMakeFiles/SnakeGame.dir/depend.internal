@@ -153,6 +153,8 @@ CMakeFiles/SnakeGame.dir/src/main.cpp.o
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
 CMakeFiles/SnakeGame.dir/src/renderer.cpp.o
+ /home/jcchia/Documents/C++ Nanodegree/Capstone Project/CppND-Capstone-Snake-Game/src/controller.h
+ /home/jcchia/Documents/C++ Nanodegree/Capstone Project/CppND-Capstone-Snake-Game/src/game.h
  /home/jcchia/Documents/C++ Nanodegree/Capstone Project/CppND-Capstone-Snake-Game/src/renderer.cpp
  /home/jcchia/Documents/C++ Nanodegree/Capstone Project/CppND-Capstone-Snake-Game/src/renderer.h
  /home/jcchia/Documents/C++ Nanodegree/Capstone Project/CppND-Capstone-Snake-Game/src/snake.h
