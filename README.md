@@ -1,12 +1,11 @@
-# CPPND: Capstone Snake Game Example
+# Capstone Project: Snake Game 
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
+
+This is a repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The project is Snake Game, which extends from the [original snake game repo](https://github.com/udacity/CppND-Capstone-Snake-Game) provided by Udacity.
 
 <img src="snake_game.gif"/>
 
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
-
-In this project, you can build your own C++ application or extend this Snake game, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
+<img src="snake_game_2p.gif"/>
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
@@ -29,18 +28,41 @@ In this project, you can build your own C++ application or extend this Snake gam
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
 4. Run it: `./SnakeGame`.
+5. Input string "1" or "one" for 1 player, "2" or "two" for 2 players in terminal.
+
+## How to play
+
+### One player
+
+1. The player control snake using key "Up", "Down", "Left" and "Right".
+2. Eat the food (yellow block) to gain score.
+3. The game will end when the snake eat its own body.
+4. The score will be printed out after the game terminated, as shown below:
+
+<img src= "1player_results.png" />
+
+### Two players
+
+1. 1st player control snake using key "Up", "Down", "Left" and "Right", while 2nd player control by using key "W", "S", "A" and "D".
+2. Eat the food (yellow block) to gain score, the player who get the highest scores after the game ends wins.
+3. The game will end when one snake eat its own body or the another snake's body.
+4. The snake which eat its own body or another snake's body will get a penalty of score deduction of 5.
+5. The result will be printed out after the game terminated, as shown below:
+
+<img src= "2players_results.png" />
 
 
-## CC Attribution-ShareAlike 4.0 International
+## Rubic points
 
+### Loops, Functions, I/O
 
-Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+1. The project demonstrates an understanding of C++ functions and control structures. - Every cpp files.
+2. The project accepts user input and processes the input. - game.cpp (line 136 - 151).
 
-This work is licensed under a
-[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+### Object Oriented Programming
 
-[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
-
-[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
-[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+1. The project uses Object Oriented Programming techniques. - Every header files.
+2. Classes use appropriate access specifiers for class members. - game.h.
+3. Classes abstract implementation details from their interfaces. - game.cpp (line 49, 111, 138, 159).
+4. Classes encapsulate behavior. - game.h (line 44 - 47).
+5. Overloaded functions allow the same function to operate on different parameters. - controller.h (line 8, 9), controller.cpp (line 12 - 92).

@@ -45,6 +45,10 @@ void Game::Run(Controller const &controller, Renderer &renderer,
       renderer.UpdateWindowTitle(score, score2, frame_count, this);
       frame_count = 0;
       title_timestamp = frame_end;
+      if (_twoplayers == true){
+        if(!snake.alive){score -=5;}   //deduct 5 points for the snake eat its own body or another snake's body
+        if(!snake2.alive){score2 -= 5;}
+      }
       if((!snake.alive) || (!snake2.alive)){break;}
     }
 
@@ -105,11 +109,11 @@ void Game::Update() {
   }
 }
 
+//Snake which eats the another snake's body died.
 void Game::Snake1EatSnake2(){
   for (auto const &item : snake2.body) {
     if (snake.CaptureHeadCell().x == item.x && snake.CaptureHeadCell().y == item.y) {
     snake.alive = false;
-    score -= 5;
     }
   }
 }
@@ -117,8 +121,7 @@ void Game::Snake1EatSnake2(){
 void Game::Snake2EatSnake1(){
   for (auto const &item : snake.body) {
     if (snake2.CaptureHeadCell().x == item.x && snake2.CaptureHeadCell().y == item.y) {
-    snake.alive = false;
-    score2 -= 5;
+    snake2.alive = false;
     }
   }
 }
@@ -133,6 +136,7 @@ bool Game::GetTwoPlayers() const {return _twoplayers;}
 
 void Game::SetTwoPlayers(bool two_players) {_twoplayers = two_players;}
 
+//Define no. of players before the game starts
 void Game::NoOfPlayersInput(){
   std::string s;
   std::cout << "One Player or Two Players?\n";
@@ -153,6 +157,7 @@ void Game::NoOfPlayersInput(){
   }
 }
 
+//Print resuts after the game ends
 void Game::PrintResult(){
   std::cout << "Game has terminated successfully!\n";
   std::cout << "Player 1 Score: " << GetScore() << "\n";
